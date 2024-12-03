@@ -21,6 +21,11 @@ Thumbs.db
 __pycache__/
 *.py[cod]
 
+# Distribution / packaging dirs
+build/
+dist/
+*.egg-info/
+
 # Coverage reports
 htmlcov/
 .coverage
