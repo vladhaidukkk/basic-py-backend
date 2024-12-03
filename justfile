@@ -4,6 +4,9 @@ default: fmt fix
 setup-githooks:
     uv run pre-commit install
 
+run-githooks *params:
+    uv run pre-commit run --all-files {{params}}
+
 # Code quality commands
 fmt:
     uv run ruff format
