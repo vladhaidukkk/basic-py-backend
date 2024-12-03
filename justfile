@@ -1,5 +1,10 @@
 default: fmt fix
 
+# Setup commands
+setup-githooks:
+    uv run pre-commit install
+
+# Code quality commands
 fmt:
     uv run ruff format
 
@@ -15,5 +20,12 @@ fix:
 check-types:
     uv run pyright
 
-setup-githooks:
-    uv run pre-commit install
+# Testing commands
+test:
+    uv run pytest -v
+
+cov:
+    uv run pytest -v --cov
+
+cov-xml:
+    uv run pytest -v --durations=0 --cov --cov-report=xml
