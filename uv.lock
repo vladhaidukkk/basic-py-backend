@@ -9,6 +9,7 @@ source = { virtual = "." }
 [package.dev-dependencies]
 dev = [
     { name = "pre-commit" },
+    { name = "pyright" },
     { name = "ruff" },
 ]
 
@@ -17,6 +18,7 @@ dev = [
 [package.metadata.requires-dev]
 dev = [
     { name = "pre-commit", specifier = ">=4.0.1" },
+    { name = "pyright", specifier = ">=1.1.389" },
     { name = "ruff", specifier = ">=0.8.1" },
 ]
 
@@ -91,6 +93,19 @@ wheels = [
 ]
 
 [[package]]
+name = "pyright"
+version = "1.1.389"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "nodeenv" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/72/4e/9a5ab8745e7606b88c2c7ca223449ac9d82a71fd5e31df47b453f2cb39a1/pyright-1.1.389.tar.gz", hash = "sha256:716bf8cc174ab8b4dcf6828c3298cac05c5ed775dda9910106a5dcfe4c7fe220", size = 21940 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1b/26/c288cabf8cfc5a27e1aa9e5029b7682c0f920b8074f45d22bf844314d66a/pyright-1.1.389-py3-none-any.whl", hash = "sha256:41e9620bba9254406dc1f621a88ceab5a88af4c826feb4f614d95691ed243a60", size = 18581 },
+]
+
+[[package]]
 name = "pyyaml"
 version = "6.0.2"
 source = { registry = "https://pypi.org/simple" }
@@ -139,6 +154,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/39/72/fcb7ad41947f38b4eaa702aca0a361af0e9c2bf671d7fd964480670c297e/ruff-0.8.1-py3-none-win32.whl", hash = "sha256:93335cd7c0eaedb44882d75a7acb7df4b77cd7cd0d2255c93b28791716e81790", size = 8803476 },
     { url = "https://files.pythonhosted.org/packages/e4/ea/cae9aeb0f4822c44651c8407baacdb2e5b4dcd7b31a84e1c5df33aa2cc20/ruff-0.8.1-py3-none-win_amd64.whl", hash = "sha256:2954cdbe8dfd8ab359d4a30cd971b589d335a44d444b6ca2cb3d1da21b75e4b6", size = 9614463 },
     { url = "https://files.pythonhosted.org/packages/eb/76/fbb4bd23dfb48fa7758d35b744413b650a9fd2ddd93bca77e30376864414/ruff-0.8.1-py3-none-win_arm64.whl", hash = "sha256:55873cc1a473e5ac129d15eccb3c008c096b94809d693fc7053f588b67822737", size = 8959621 },
+]
+
+[[package]]
+name = "typing-extensions"
+version = "4.12.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/df/db/f35a00659bc03fec321ba8bce9420de607a1d37f8342eee1863174c69557/typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8", size = 85321 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/26/9f/ad63fc0248c5379346306f8668cda6e2e2e9c95e01216d2b8ffd9ff037d0/typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d", size = 37438 },
 ]
 
 [[package]]

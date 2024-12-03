@@ -12,5 +12,8 @@ lint:
 fix:
     uv run ruff check --fix
 
+check-types:
+    uv run pyright
+
 setup-githooks:
     uv run pre-commit install
