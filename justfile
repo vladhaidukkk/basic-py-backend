@@ -7,6 +7,10 @@ setup-githooks:
 run-githooks *params:
     uv run pre-commit run --all-files {{params}}
 
+# Startup commands
+run host="127.0.0.1" port="8000":
+    HOST={{host}} PORT={{port}} uv run python -m src.main
+
 # Code quality commands
 fmt:
     uv run ruff format
